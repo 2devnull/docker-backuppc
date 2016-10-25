@@ -19,7 +19,7 @@ fi
 # Ensure that an SSH key exists
 if [ ! -e /var/lib/backuppc/.ssh/id_rsa ] ; then
     mkdir /var/lib/backuppc/.ssh
-    ssh-keygen -f /var/lib/backuppc/.ssh/id_rsa -C "BackupPC Backup Key"
+    ssh-keygen -f /var/lib/backuppc/.ssh/id_rsa -N '' -C "BackupPC Backup Key"
     cp /etc/backuppc-ssh-config /var/lib/backuppc/.ssh/config
     chown -R backuppc:backuppc /var/lib/backuppc/.ssh
     echo 
