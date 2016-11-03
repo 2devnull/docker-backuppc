@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM monsantoco/min-jessie
 
 MAINTAINER 2devnull
 
