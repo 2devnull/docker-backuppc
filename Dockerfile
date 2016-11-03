@@ -29,6 +29,17 @@ RUN chmod 0755 /run.sh
 
 RUN tar -zf /root/etc-backuppc.tgz -C /etc/backuppc -c .
 
+RUN rm -rf /var/lib/apt/lists/* && \
+    apt-get clean -y && \
+    apt-get autoclean -y && \
+    apt-get autoremove -y && \
+    rm -rf /usr/share/locale/* && \
+    rm -rf /var/cache/debconf/*-old && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /usr/share/doc/* && \
+    rm -rf /tmp/* /var/tmp/*
+
+
 ENV MAILHOST mail
 ENV FROM backuppc
 
