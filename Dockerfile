@@ -1,4 +1,4 @@
-FROM monsantoco/min-jessie
+FROM ubuntu:14.04
 
 MAINTAINER 2devnull
 
