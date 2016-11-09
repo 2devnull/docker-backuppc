@@ -38,6 +38,8 @@ RUN rm -rf /var/lib/apt/lists/* && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /usr/share/doc/* && \
     rm -rf /tmp/* /var/tmp/*
+    
+RUN echo "America/New_York" > /etc/timezone && dpkg-reconfigure tzdata && date
 
 
 ENV MAILHOST mail
